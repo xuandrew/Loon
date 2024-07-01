@@ -3,6 +3,8 @@
 #!icon=https://raw.githubusercontent.com/anker1209/icon/main/xmly.png
 
 
+[URL Rewrite]
 # 彩云天气广告
 ^https?:\/\/ad\.(caiyunapp|cyapi)\.(cn|com) - reject
 ^http:\/\/adx\.sogaha\.cn\/sdk\/ad\/get - reject-200
+
