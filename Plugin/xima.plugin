@@ -3,7 +3,11 @@
 #!icon=https://raw.githubusercontent.com/anker1209/icon/main/xmly.png
 
 
+[Rule]
+DOMAIN,gslbali.ximalaya.com,REJECT
+DOMAIN,gslbtx.ximalaya.com,REJECT
 
+[Rewrite]
 https?:\/\/xdcs-collector(hera)?\.ximalaya\.com\/(api|nyx)\/v1 url reject
 https?:\/\/.*\.ximalaya\.com\/mobile-playpage\/view\/ url reject
 https?:\/\/.*\.ximalaya\.com\/chaos-notice-web\/v1\/message\/preview\/list url reject
