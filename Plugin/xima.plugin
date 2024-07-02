@@ -1,7 +1,10 @@
 #!name = 喜马拉雅去广告
-#!desc = 解锁VIP，去除显而易见的广告
-#!icon=https://raw.githubusercontent.com/anker1209/icon/main/xmly.png
-
+#!desc = 喜马拉雅会员&去广告
+#!openUrl = https://apps.apple.com/app/id876336838
+#!author = @可莉🅥 @ClydeTime
+#!homepage = https://github.com/sooyaaabo/Loon
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Himalaya.png
+#!date = 2024-07-02 19:00
 
 [Rule]
 DOMAIN,gslbali.ximalaya.com,REJECT
