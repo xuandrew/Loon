@@ -7,29 +7,29 @@
 #!date = 2024-07-02 19:00
 
 [Rule]
-DOMAIN,gslbali.ximalaya.com,REJECT
-DOMAIN,gslbtx.ximalaya.com,REJECT
+domain, gslbali.ximalaya.com, reject
+domain, gslbtx.ximalaya.com, reject
 
 [Rewrite]
-https?:\/\/xdcs-collector(hera)?\.ximalaya\.com\/(api|nyx)\/v1 url reject
-https?:\/\/.*\.ximalaya\.com\/mobile-playpage\/view\/ url reject
-https?:\/\/.*\.ximalaya\.com\/chaos-notice-web\/v1\/message\/preview\/list url reject
-https?:\/\/.*\.ximalaya\.com\/social-web\/bottomtabs\/dynamicentrance\/status url reject
-https?:\/\/.*\.ximalaya\.com\/(dog-portal\/checkold|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) url reject
-https?:\/\/.*\.ximalaya\.com\/discovery-feed\/isshowusergiftpendant url reject
-https?:\/\/.*\.ximalaya\.com\/mobile-user\/unread url reject
-https?:\/\/.*\.ximalaya\.com\/mobile-user\/minorprotection\/pop url reject
-https?:\/\/.*\.ximalaya\.com\/collector\/xl\/v\d url reject
-https?:\/\/.*\.ximalaya\.com\/butler-portal\/versioncheck url reject
-https?:\/\/(adse\.wsa|adse|adbehavior)\.ximalaya\.com\/.* url reject
-https?:\/\/.*\.ximalaya\.com\/mobile\/discovery\/v\d\/location url reject
-https?:\/\/.*\.ximalaya\.com\/api\/v\d\/adrealtime url reject
-https?:\/\/.*\.ximalaya\.com\/ting\/(loading|feed|home)? url reject
-https?:\/\/.*\.ximalaya\.com\/discovery-feed\/focus\/queryf url reject
-https?:\/\.*linkeye-cloud\/checkip url reject
-https?:\/\/www\.taobao\.com\/help\/getip\.php url reject
-https?:\/\.*audid-api\.taobao\.com url reject
-https?:\/\/passport(ws)?\.ximalaya\.com\/user-http-app\/v1\/token\/refresh url reject
+https?:\/\/xdcs-collector(hera)?\.ximalaya\.com\/(api|nyx)\/v1 - reject
+https?:\/\/.*\.ximalaya\.com\/mobile-playpage\/view\/ - reject
+https?:\/\/.*\.ximalaya\.com\/chaos-notice-web\/v1\/message\/preview\/list - reject
+https?:\/\/.*\.ximalaya\.com\/social-web\/bottomtabs\/dynamicentrance\/status - reject
+https?:\/\/.*\.ximalaya\.com\/(dog-portal\/checkold|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) - reject
+https?:\/\/.*\.ximalaya\.com\/discovery-feed\/isshowusergiftpendant - reject
+https?:\/\/.*\.ximalaya\.com\/mobile-user\/unread - reject
+https?:\/\/.*\.ximalaya\.com\/mobile-user\/minorprotection\/pop - reject
+https?:\/\/.*\.ximalaya\.com\/collector\/xl\/v\d - reject
+https?:\/\/.*\.ximalaya\.com\/butler-portal\/versioncheck - reject
+https?:\/\/(adse\.wsa|adse|adbehavior)\.ximalaya\.com\/.* - reject
+https?:\/\/.*\.ximalaya\.com\/mobile\/discovery\/v\d\/location - reject
+https?:\/\/.*\.ximalaya\.com\/api\/v\d\/adrealtime - reject
+https?:\/\/.*\.ximalaya\.com\/ting\/(loading|feed|home)? - reject
+https?:\/\/.*\.ximalaya\.com\/discovery-feed\/focus\/queryf - reject
+https?:\/\.*linkeye-cloud\/checkip - reject
+https?:\/\/www\.taobao\.com\/help\/getip\.php - reject
+https?:\/\.*audid-api\.taobao\.com - reject
+https?:\/\/passport(ws)?\.ximalaya\.com\/user-http-app\/v1\/token\/refresh - reject
 
 
 [Script]
