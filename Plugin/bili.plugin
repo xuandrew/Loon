@@ -13,6 +13,7 @@ http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\? script
 
 # > 哔哩哔哩会员限定版
 http-request ^https?:\/\/ap(i|p)\.bilibili\.com\/bilibili\.\w{3,9}\..+\/(View|Play(URL|View(Unite)?|Conf|erOnline)|MainList|ViewProgress)$  script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/BiliBili/BiLiBiLiBVIPCrack.js, requires-body = true, tag = 解锁4K播放权限
+http-response ^https?:\/\/ap(i|p)\.bilibili\.com\/x\/(vip|v2|resource)\/(account|web|price|top_panel_info)(\/|\?)(mine|myinfo|vip_center|panel|_bridge\?).* script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/BiliBili/bili_info.js, requires-body = true, tag = 解锁4K播放权限
 
 
 [MitM]
