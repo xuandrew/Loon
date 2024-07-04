@@ -10,7 +10,7 @@
 domain, gslbali.ximalaya.com, reject
 domain, gslbtx.ximalaya.com, reject
 
-[Rewrite]
+[URL Rewrite]
 https?:\/\/xdcs-collector(hera)?\.ximalaya\.com\/(api|nyx)\/v1 - reject
 https?:\/\/.*\.ximalaya\.com\/mobile-playpage\/view\/ - reject
 https?:\/\/.*\.ximalaya\.com\/chaos-notice-web\/v1\/message\/preview\/list - reject
