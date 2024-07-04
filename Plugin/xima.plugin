@@ -6,9 +6,6 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Himalaya.png
 #!date = 2024-07-02 19:00
 
-[Rule]
-domain, gslbali.ximalaya.com, reject
-domain, gslbtx.ximalaya.com, reject
 
 [URL Rewrite]
 https?:\/\/xdcs-collector(hera)?\.ximalaya\.com\/(api|nyx)\/v1 - reject
