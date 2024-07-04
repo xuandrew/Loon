@@ -32,7 +32,7 @@ https?:\/\/passport(ws)?\.ximalaya\.com\/user-http-app\/v1\/token\/refresh - rej
 [Script]
 # ClydeTime
 # 专辑音频
- http-response ^https?:\/\/(mobile(hera)?|m(ob)?wsa|m)\.ximalaya\.com\/mobile(-user\/v\d\/homePage|-playpage\/(track\/v\d\/baseInfo|playpage\/(tabs\/v\d|recommend(\/resource\/allocation|ContentV\d)))|\/(album\/paid\/info|playlist\/album\/new)|\/v\d\/album\/track) script-path = https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/XMLY/xmly.js, requires-body = true, tag = 专辑音频@ClydeTime
+http-response ^https?:\/\/(mobile(hera)?|m(ob)?wsa|m)\.ximalaya\.com\/mobile(-user\/v\d\/homePage|-playpage\/(track\/v\d\/baseInfo|playpage\/(tabs\/v\d|recommend(\/resource\/allocation|ContentV\d)))|\/(album\/paid\/info|playlist\/album\/new)|\/v\d\/album\/track) script-path = https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/XMLY/xmly.js, requires-body = true, tag = 专辑音频@ClydeTime
 # 会员页
 http-response ^https?:\/\/(mobile(hera)?|m(ob)?wsa|m)\.ximalaya\.com\/business-vip-(presale-mobile-web\/page|level-h5-web\/api\/(gift\/detail|profile)|welfare-mobile-web\/welfare\/module\/exclusive\/list) script-path = https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/XMLY/xmly.js, requires-body = true, tag = 会员页@ClydeTime
 # 发现页
