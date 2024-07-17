@@ -1,1 +1,54 @@
+#!name = 百度网盘
+#!desc = 去除百度网盘广告，解锁百度网盘高速加载、倍速播放、高清画质、智能字幕、完整文稿、SVIP10皮肤以及点亮SVIP10标识等内容。
+#!openUrl = https://apps.apple.com/app/id547166701
+#!author = @RuCu6 @chxm1023 @ddgksf2013
+#!keyword = 去广告, 解锁会员, RuCu6, chxm1023, ddgksf2013
+#!homepage = https://github.com/sooyaaabo/Loon
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BaiduNetdisk.png
+#!date = 2024-07-16 23:00
+
+# 2024-07-15 21:25
+# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
+# 2023-07-30
+# https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js
+# 2023-08-19 13:48:55
+# https://github.com/chxm1023/Rewrite/blob/main/bdcloud.js
+
+[Rule]
+IP-CIDR, 180.76.76.112/32, REJECT, no-resolve
+IP-CIDR, 180.76.76.200/32, REJECT, no-resolve
+
+
+[Rewrite]
+https:\/\/staticsns\.cdn\.bcebos\.com\/amis\/.+\.(jpg|png|jpeg|gif)$ - reject-200
+https:\/\/pan\.baidu\.com\/imbox\/msg\/pull - reject-200
+https:\/\/pan\.baidu\.com\/api\/version\/getlatestversion - reject-200
+https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/level - reject-200
+https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/activity - reject-200
+https:\/\/pan\.baidu\.com\/act\/api\/conf - reject-200
+https:\/\/pan\.baidu\.com\/act\/v2\/welfare\/list - reject-200
+https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/proxy\/guide - reject-200
+https:\/\/pan\.baidu\.com\/api\/taskscore\/tasklist - reject-200
+https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/xpan\/smartprogram - reject-200
+
+[Script]
+http-response https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user script-path=https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/BaiduCloud.js, requires-body=true, timeout=60, tag=BaiduCloud
+
+http-response https:\/\/pan\.baidu\.com\/act\/v2\/membergrow\/my script-path=https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/BaiduCloud.js, requires-body=true, timeout=60, tag=BaiduCloud
+
+http-response https:\/\/pan\.baidu\.com\/story\/diff script-path=https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/BaiduCloud.js, requires-body=true, timeout=60, tag=BaiduCloud
+
+http-response https:\/\/pan\.baidu\.com\/dosp\/opconf\/list script-path=https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/BaiduCloud.js, requires-body=true, timeout=60, tag=BaiduCloud
+
+http-response https:\/\/pan\.baidu\.com\/api\/user\/getinfo script-path=https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/BaiduCloud.js, requires-body=true, timeout=60, tag=BaiduCloud
+
+http-response https:\/\/pan\.baidu\.com\/act\/api\/activityentry script-path=https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/BaiduCloud.js, requires-body=true, timeout=60, tag=BaiduCloud
+
+http-response https:\/\/pan\.baidu\.com\/api\/singkil\/bindquery script-path=https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/BaiduCloud.js, requires-body=true, timeout=60, tag=BaiduCloud
+
+http-response ^https?:\/\/pan\.baidu\.com\/(youai\/(user\/.+\/getminfo|membership\/.+\/adswitch)|(act\/.+\/(bchannel|welfare)\/list|api\/usercfg)) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/bdcloud.js, requires-body=true, timeout=60, tag=bdcloud
+
+http-response ^https?:\/\/pan\.baidu\.com\/api\/getsyscfg script-path=https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js, requires-body=true, timeout=60, tag=baiduCloud.vip
+
+
 https://pan.baidu.com/rest/2.0/membership/user?method=gamecenter&app_id=250528
