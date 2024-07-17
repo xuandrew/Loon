@@ -53,3 +53,5 @@ http-response ^https?:\/\/pan\.baidu\.com\/(youai\/(user\/.+\/getminfo|membershi
 http-response ^https?:\/\/pan\.baidu\.com\/api\/getsyscfg script-path=https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js, requires-body=true, timeout=60, tag=baiduCloud.vip
 
 
+[Mitm]
+hostname = pan.baidu.com, staticsns.cdn.bcebos.com
