@@ -7,6 +7,10 @@
 #!date = 2024-05-23 13:25:06
 
 
+[Rule]
+DOMAIN, upos-sz-staticcos.bilivideo.com, REJECT
+
+
 [Script]
 # 移除右上角活动入口
 http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body = true, tag = 移除右上角活动入口
