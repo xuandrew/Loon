@@ -1,11 +1,11 @@
 #!name = 百度网盘
-#!desc = 去除百度网盘广告，解锁百度网盘高速加载、倍速播放、高清画质、智能字幕、完整文稿、SVIP10皮肤以及点亮SVIP10标识等内容。
+#!desc = 移除开屏广告、首页卡片广告、传输页面广告、各类弹窗，精简侧拉抽屉和我的页面。解锁百度网盘高速加载、倍速播放、高清画质、智能字幕、完整文稿、SVIP10皮肤以及点亮SVIP10标识等内容。
 #!openUrl = https://apps.apple.com/app/id547166701
-#!author = @RuCu6 @chxm1023 @ddgksf2013
-#!keyword = 去广告, 解锁会员, RuCu6, chxm1023, ddgksf2013
+#!author = @RuCu6 @chxm1023 @ddgksf2013 @可莉🅥
+#!keyword = 去广告, 解锁会员, RuCu6, chxm1023, ddgksf2013, 可莉
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BaiduNetdisk.png
-#!date = 2024-07-16 23:00
+#!date = 2024-07-20 10:45
 
 # 2024-07-15 21:25
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
@@ -13,45 +13,66 @@
 # https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js
 # 2023-08-19 13:48:55
 # https://github.com/chxm1023/Rewrite/blob/main/bdcloud.js
+# 2024-07-20 10:30:06
+# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/BaiduNetDisk_remove_ads.plugin
 
 [Rule]
-IP-CIDR, 180.76.76.112/32, REJECT, no-resolve
-IP-CIDR, 180.76.76.200/32, REJECT, no-resolve
+# 拦截HTTPDNS
+^https?:\/\/180\.76\.76\.200\/v\d\/resolve reject
+^https?:\/\/180\.76\.76\.112\/v\d\/resolve reject
 
+# 百度联盟 - 广告服务商
+DOMAIN, mobads.baidu.com, REJECT
+DOMAIN, mobads-logs.baidu.com, REJECT
+DOMAIN, wn.pos.baidu.com, REJECT
+DOMAIN, bgg.baidu.com, REJECT
+DOMAIN, als.baidu.com, REJECT
+DOMAIN, mobads-pre-config.cdn.bcebos.com, REJECT
+DOMAIN, cpro.baidustatic.com, REJECT
+DOMAIN, feed-image.baidu.com, REJECT
+DOMAIN-SUFFIX, union.baidu.cn, REJECT
+DOMAIN-SUFFIX, union.baidu.com, REJECT
 
 [Rewrite]
-https:\/\/staticsns\.cdn\.bcebos\.com\/amis\/.+\.(jpg|png|jpeg|gif)$ - reject-200
-https:\/\/pan\.baidu\.com\/imbox\/msg\/pull - reject-200
-https:\/\/pan\.baidu\.com\/api\/version\/getlatestversion - reject-200
-https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/level - reject-200
-https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/activity - reject-200
-https:\/\/pan\.baidu\.com\/act\/api\/conf - reject-200
-https:\/\/pan\.baidu\.com\/act\/v2\/welfare\/list - reject-200
-https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/proxy\/guide - reject-200
-https:\/\/pan\.baidu\.com\/api\/taskscore\/tasklist - reject-200
-https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/xpan\/smartprogram - reject-200
-https:\/\/pan\.baidu\.com\/rest\/2.0\/membership\/user\?method=gamecenter&app_id=250528 - reject-200
+# RuCu6
+^https?:\/\/pan\.baidu\.com\/(act\/(api\/activityentry|v2\/(bchannel|welfare)\/list)|rest\/2\.0\/pcs\/ad) reject
 
+# 可莉🅥
+# 应用配置
+^https:\/\/pan\.baidu\.com\/api\/getconfig reject-dict
+^https:\/\/pan\.baidu\.com\/api\/getsyscfg reject-dict
+# 签到任务配置
+^https:\/\/pan\.baidu\.com\/api\/taskscore\/tasklist reject-dict
+# 弹窗配置
+^https:\/\/pan\.baidu\.com\/act\/api\/activityentry reject-dict
+# 信息流广告
+^https:\/\/pan\.baidu\.com\/act\/api\/activityentry reject-dict
+# 我的 - 游戏中心
+^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user\?method=gamecenter reject-dict
+# 我的页面 - 其他推广
+^https:\/\/pan\.baidu\.com\/act\/v2\/welfare\/list reject-dict
+# 广告配置
+^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adv reject-dict
+
+# ddgksf2013
+# 设置信息流
+^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list reject-200
+# 通用广告
+^https?:\/\/pan\.baidu\.com\/rest\/.*\/pcs\/ad reject-200
+# 活动推广
+^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry reject-200
 
 [Script]
-http-response https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user script-path=https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/BaiduCloud.js, requires-body=true, timeout=60, tag=BaiduCloud
+# RuCu6
+http-response ^https:\/\/pan\.baidu\.com\/api\/getsyscfg\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js, requires-body = true, tag = 百度网盘广告@RuCu6
+http-response ^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js, requires-body = true, tag = 百度网盘广告@RuCu6
 
-http-response https:\/\/pan\.baidu\.com\/act\/v2\/membergrow\/my script-path=https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/BaiduCloud.js, requires-body=true, timeout=60, tag=BaiduCloud
+# chxm1023
+http-response ^https?:\/\/pan\.baidu\.com\/(youai\/(user\/.+\/getminfo|membership\/.+\/adswitch)|(rest\/.+\/membership\/user|act\/.+\/(bchannel|welfare)\/list|api\/usercfg)) script-path = https://raw.githubusercontent.com/chxm1023/Rewrite/main/bdcloud.js, requires-body = true, tag = 解锁SVIP权益@chxm1023
 
-http-response https:\/\/pan\.baidu\.com\/story\/diff script-path=https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/BaiduCloud.js, requires-body=true, timeout=60, tag=BaiduCloud
-
-http-response https:\/\/pan\.baidu\.com\/dosp\/opconf\/list script-path=https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/BaiduCloud.js, requires-body=true, timeout=60, tag=BaiduCloud
-
-http-response https:\/\/pan\.baidu\.com\/api\/user\/getinfo script-path=https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/BaiduCloud.js, requires-body=true, timeout=60, tag=BaiduCloud
-
-http-response https:\/\/pan\.baidu\.com\/act\/api\/activityentry script-path=https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/BaiduCloud.js, requires-body=true, timeout=60, tag=BaiduCloud
-
-http-response https:\/\/pan\.baidu\.com\/api\/singkil\/bindquery script-path=https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/BaiduCloud.js, requires-body=true, timeout=60, tag=BaiduCloud
-
-http-response ^https?:\/\/pan\.baidu\.com\/(youai\/(user\/.+\/getminfo|membership\/.+\/adswitch)|(act\/.+\/(bchannel|welfare)\/list|api\/usercfg)) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/bdcloud.js, requires-body=true, timeout=60, tag=bdcloud
-
-http-response ^https?:\/\/pan\.baidu\.com\/api\/getsyscfg script-path=https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js, requires-body=true, timeout=60, tag=baiduCloud.vip
-
+# ddgksf2013
+http-response ^https?:\/\/pan\.baidu\.com\/api\/getsyscfg script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js, requires-body = true, tag = 开屏广告@ddgksf2013
+http-response ^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?app_id script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js, requires-body = true, tag = 会员权益@ddgksf2013
 
 [Mitm]
-hostname = pan.baidu.com, staticsns.cdn.bcebos.com
+hostname = pan.baidu.com, 180.76.76.200, 180.76.76.112
