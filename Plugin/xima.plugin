@@ -27,6 +27,7 @@ https?:\/\.*linkeye-cloud\/checkip - reject
 https?:\/\/www\.taobao\.com\/help\/getip\.php - reject
 https?:\/\.*audid-api\.taobao\.com - reject
 https?:\/\/passport(ws)?\.ximalaya\.com\/user-http-app\/v1\/token\/refresh - reject
+^https?://adse\.ximalaya\.com/incentive/ting/durationConfig - reject
 
 
 [Script]
