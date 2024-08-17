@@ -23,7 +23,9 @@ IP-CIDR, 203.107.1.33/32, REJECT, no-resolve
 IP-CIDR, 203.107.1.66/32, REJECT, no-resolve
 IP-CIDR6, 240E:978:1503::243/128, REJECT, no-resolve
 
-
+[Rewrite]
+#哔哩哔哩加速腾讯服务器
+^https:\/\/upos-hz-mirrorakam\.akamaized\.net 307 https://upos-sz-mirrorcos.bilivideo.com
 
 [Script]
 # 移除右上角活动入口
