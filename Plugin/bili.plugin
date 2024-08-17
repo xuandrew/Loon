@@ -9,7 +9,7 @@
 
 [Rule]
 DOMAIN, upos-sz-staticcos.bilivideo.com, REJECT
-DOMAIN, grpc.biliapi.net, REJECT
+# DOMAIN, grpc.biliapi.net, REJECT
 DOMAIN, mall.bilibili.com, REJECT
 DOMAIN, passport.bilibili.com, REJECT
 IP-CIDR, 47.100.123.169/32, REJECT, no-resolve
