@@ -1,6 +1,6 @@
 #!name = 彩云天气去广告
 #!desc = 解锁VIP，去除显而易见的广告
-#!author = chxm1023
+#!author = @ddgksf2013
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Plugin
 #!icon = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/CaiYun.png
 #!date = 2023-10-29 13:48:55
@@ -13,27 +13,27 @@
 
 [Script]
 # > 伪装VIP解锁48小时降水[需登录][新验证接口]@ddgksf2013
-^https?:\/\/biz\.cyapi\.cn\/api\/v\d\/user_detail url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
+http-response ^https?:\/\/biz\.cyapi\.cn\/api\/v\d\/user_detail url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
 # > 伪装VIP解锁48小时降水[需登录]@ddgksf2013
-^https?:\/\/biz\.cyapi\.cn\/v\d\/user url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
+http-response ^https?:\/\/biz\.cyapi\.cn\/v\d\/user url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
 # > 图层推广@ddgksf2013
-^https?:\/\/wrapper\.cyapi\.cn\/v\d\/activity url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
+http-response ^https?:\/\/wrapper\.cyapi\.cn\/v\d\/activity url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
 # > 活动推广@ddgksf2013
-^https?:\/\/api\.caiyunapp\.com\/v\d\/activity url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
+http-response ^https?:\/\/api\.caiyunapp\.com\/v\d\/activity url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
 # > 首页顶部推广@ddgksf2013
-^https?:\/\/starplucker\.cyapi\.cn\/v\d/operation/homefeatures url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
+http-response ^https?:\/\/starplucker\.cyapi\.cn\/v\d/operation/homefeatures url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
 # > SVIP提醒推广@ddgksf2013
-^https?:\/\/starplucker\.cyapi\.cn\/v\d/notification/message_center url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
+http-response ^https?:\/\/starplucker\.cyapi\.cn\/v\d/notification/message_center url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
 # > 雨季特惠提醒@ddgksf2013
-^https?:\/\/starplucker\.cyapi\.cn\/v\d/config/cypage url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
+http-response ^https?:\/\/starplucker\.cyapi\.cn\/v\d/config/cypage url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
 # > 发现页信息流推荐@ddgksf2013
-^https?:\/\/starplucker\.cyapi\.cn\/v\d/operation/feeds url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
+http-response ^https?:\/\/starplucker\.cyapi\.cn\/v\d/operation/feeds url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
 # > 发现页banners@ddgksf2013
-^https?:\/\/starplucker\.cyapi\.cn\/v\d/operation/banners url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
+http-response ^https?:\/\/starplucker\.cyapi\.cn\/v\d/operation/banners url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
 # > 发现页中间部分@ddgksf2013
-^https?:\/\/starplucker\.cyapi\.cn\/v\d/operation/features url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
+http-response ^https?:\/\/starplucker\.cyapi\.cn\/v\d/operation/features url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
 # > 发现页活动@ddgksf2013
-^https?:\/\/starplucker\.cyapi\.cn\/v\d/campaigns url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
+http-response ^https?:\/\/starplucker\.cyapi\.cn\/v\d/campaigns url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/caiyun_json.js
 
 
 [Mitm]
