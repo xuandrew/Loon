@@ -48,7 +48,7 @@ http-response ^https?:\/\/search(wsa)?\.ximalaya\.com\/(hub\/)?(guideWordV\d|hot
 # http-request ^https?:\/\/(mobile(hera)?|m(ob)?wsa)\.ximalaya\.com\/(mobile-playpage\/track|mobile\/quickplay) script-path = https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/XMLY/xmly_ck.js, requires-body = true, tag = 解锁会员@ClydeTime
 # http-request ^https?:\/\/.+((ximalaya)|(xmcdn)).+\/[a-z]{6}\-[a-z]{8}\/track\/(v[0-9])\/[a-zA-Z]+\/ts.*$ script-path = https://raw.githubusercontent.com/WeiGiegie/666/main/xmck.js, requires-body = true, tag = 解锁会员@伟哥
 # http-request ^https?:\/\/.+((ximalaya)|(xmcdn)).+\/[a-z]{6}\-[a-z]{8}\/track\/(v[0-9])\/[a-zA-Z]+\/ts.*$ script-path = https://raw.githubusercontent.com/WeiGiegie/666/main/xmck1.js, requires-body = true, tag = 解锁会员@伟哥
-http-request ^https?:\/\/.+((ximalaya)|(xmcdn)).+\/[a-z]{6}\-[a-z]{8}\/track\/(v[0-9])\/[a-zA-Z]+\/ts.*$ script-path = https://raw.githubusercontent.com/WeiGiegie/666/main/ximalayack.js, requires-body = true, tag = 解锁会员@伟哥
+http-request ^https?:\/\/.+((ximalaya)|(xmcdn)).+\/[a-z]{6}\-[a-z]{8}\/track\/(v[0-9])\/[a-zA-Z]+\/ts.*$ script-path = https://raw.githubusercontent.com/WeiGiegie/666/main/ximalayack.js, requires-body = false, tag = 解锁会员@伟哥
 
 # 首页顶部去除直播
 http-response ^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除首页直播推广@可莉🅥
