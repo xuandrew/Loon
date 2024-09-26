@@ -1,6 +1,10 @@
 #!name = 彩云天气去广告
 #!desc = 解锁VIP，去除显而易见的广告
 #!author = @ddgksf2013
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.2(749)
 #!homepage = https://github.com/ddgksf2013/Rewrite/raw/master/AdBlock/CaiYunAds.conf
 #!icon = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/CaiYun.png
 #!date = 2024-09-01 13:48:55
