@@ -97,7 +97,8 @@ http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/creator\/music
 
 # ======= 网易云歌曲区 ======= #
 # > 评论区插入推广@ddgksf2013
-http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/batch script-path = https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 评论区插入推广
+#http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/batch script-path = https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 评论区插入推广
+http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/batch script-path = https://raw.githubusercontent.com/luestr/ProxyResource/main/Resource/Script/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 评论区插入推广
 
 
 [MitM]
