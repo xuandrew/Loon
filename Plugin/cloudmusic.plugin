@@ -47,7 +47,7 @@ DOMAIN, ipv6.music.163.com, REJECT
 # > 底部Tab@ddgksf2013
 http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/home\/framework\/tab script-path = https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 底部Tab
 # > 发现页@ddgksf2013
-# http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show script-path = https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 发现页
+http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show script-path = https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 发现页
 # > 首推荐页@ddgksf2013
 http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/page\/rcmd\/resource\/show script-path = https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 首推荐页
 # > 软件更新@ddgksf2013
@@ -96,11 +96,11 @@ http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/yunbei\/accoun
 http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/creator\/musician\/reminder\/message\/get script-path = https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 侧边创作福利
 
 # ======= 网易云歌曲区 ======= #
-# > 评论区插入推广@ddgksf2013
+## > 评论区插入推广@ddgksf2013
 http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/batch script-path = https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 评论区插入推广
 # http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/batch script-path = https://raw.githubusercontent.com/luestr/ProxyResource/main/Resource/Script/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 评论区插入推广
-# http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/v\d\/resource\/comment\/floor\/get script-path = https://raw.githubusercontent.com/luestr/ProxyResource/main/Resource/Script/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_mian
+http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/v\d\/resource\/comment\/floor\/get script-path = https://raw.githubusercontent.com/luestr/ProxyResource/main/Resource/Script/NeteaseCloudMusic/NeteaseCloudMusic_remove_ads.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_mian
 
 
 [MitM]
-hostname = interface*.music.163.com
+hostname = interface*.music.163.com,ipv4.music.163.com
