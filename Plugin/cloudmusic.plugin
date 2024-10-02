@@ -45,9 +45,9 @@ DOMAIN, ipv6.music.163.com, REJECT
 
 # ======= 网易云框架区 ======= #
 # > 底部Tab@ddgksf2013
-# http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/home\/framework\/tab script-path = https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 底部Tab
+http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/home\/framework\/tab script-path = https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 底部Tab
 # > 发现页@ddgksf2013
-http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show script-path = https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 发现页
+# http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show script-path = https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 发现页
 # > 首推荐页@ddgksf2013
 http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/page\/rcmd\/resource\/show script-path = https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 首推荐页
 # > 软件更新@ddgksf2013
