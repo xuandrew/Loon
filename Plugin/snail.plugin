@@ -3,10 +3,18 @@
 #!icon=https://raw.githubusercontent.com/xuandrew/Loon/refs/heads/main/icon/Snail2.png
 #!homepage=https://whatshub.top
 #!author=yxiaocai & JO2EY
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.2(749)
+
+[Rewite]
+^https?://p\.du\.163\.com/readtime/info.json reject
 
 
 [Script]
-
+# 网易蜗牛读书解锁
+http-response ^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json script-path = https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/wnyd.js, requires-body = true, tag = 网易蜗牛读书解锁
 
 
 [MITM]
