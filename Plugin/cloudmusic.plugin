@@ -12,13 +12,12 @@
 
 
 [Rule]
-DOMAIN, httpdns.n.netease.com, REJECT
-DOMAIN, iadmat.nosdn.127.net, REJECT
-DOMAIN, iadmatapk.nosdn.127.net, REJECT
-DOMAIN, iadmusicmat.music.126.net, REJECT
-DOMAIN, iadmusicmatvideo.music.126.net, REJECT
-DOMAIN, ipv4.music.163.com, REJECT
-DOMAIN, ipv6.music.163.com, REJECT
+DOMAIN,iadmusicmat.music.126.net,REJECT-DROP
+DOMAIN,iadmat.nosdn.127.net,REJECT-DROP
+DOMAIN,iadmatapk.nosdn.127.net,REJECT-DROP
+DOMAIN,httpdns.n.netease.com,REJECT-DROP
+DOMAIN,gdt.qq.com,REJECT-DROP
+DOMAIN-SUFFIX,163jiasu.com,REJECT-DROP
 
 [Rewrite]
 
