@@ -23,9 +23,13 @@
 # IP-CIDR, 203.107.1.66/32, REJECT, no-resolve
 # IP-CIDR6, 240E:978:1503::243/128, REJECT, no-resolve
 
-[Script]
+
+[Rewrite]
 # 移除右上角活动入口
-http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body = true, tag = 移除右上角活动入口
+^https:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\? mock-response-body data-type=json status-code=200 data="{ "code": -404, "message": "啥都木有", "ttl": 1, "data": null }"
+
+
+[Script]
 
 # > 哔哩哔哩会员限定版
 # http-request ^https?:\/\/ap(i|p)\.bilibili\.com\/bilibili\.\w{3,9}\..+\/(View|Play(URL|View(Unite)?|Conf|erOnline)|MainList|ViewProgress)$  script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/BiliBili/BiLiBiLiBVIPCrack.js, requires-body = true, tag = 解锁4K播放权限
