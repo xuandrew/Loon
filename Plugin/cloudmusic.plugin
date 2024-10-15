@@ -25,21 +25,21 @@ DOMAIN-SUFFIX,163jiasu.com,REJECT-DROP
 # > 活动推广@ddgksf2013
 ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/content\/activity\/music\/jar\/template\/list reject-dict
 # > 启动领VIP弹窗@ddgksf2013
-^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/sp\/flow\/popup\/query url reject-dict
+^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/sp\/flow\/popup\/query reject-dict
 
 # ======= 网易云侧栏区 ======= #
 # > 优惠券@ddgksf2013
-^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/vipmall\/couponcfg\/get url reject-dict
+^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/vipmall\/couponcfg\/get reject-dict
 
 # ======= 网易云歌曲区 ======= #
 # > 活动推广@ddgksf2013
-^https?:\/\/interface(\d)?\.music\.163\.com\/w?eapi\/(resource-exposure\/)?activity url reject-dict
+^https?:\/\/interface(\d)?\.music\.163\.com\/w?eapi\/(resource-exposure\/)?activity reject-dict
 # > 评论区插入推广@ddgksf2013
-^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/comment\/feed\/inserted\/resources url reject-dict
+^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/comment\/feed\/inserted\/resources reject-dict
 # > 购买实体专辑@ddgksf2013
-^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/resource-exposure\/config url reject-dict
+^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/resource-exposure\/config reject-dict
 # > 歌单顶部广告
-^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/scene\/show\/resource
+^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/scene\/show\/resource reject-dict
 
 [Script]
 
