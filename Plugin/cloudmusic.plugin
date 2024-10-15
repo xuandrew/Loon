@@ -37,8 +37,9 @@ DOMAIN-SUFFIX,163jiasu.com,REJECT-DROP
 # > 评论区插入推广@ddgksf2013
 ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/comment\/feed\/inserted\/resources url reject-dict
 # > 购买实体专辑@ddgksf2013
-^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/resource-exposure\/config url rreject-dict
-
+^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/resource-exposure\/config url reject-dict
+# > 歌单顶部广告
+^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/scene\/show\/resource
 
 [Script]
 
@@ -78,7 +79,7 @@ http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/ad\/get script
 # > 插入广告@ddgksf2013
 http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/position\/show\/resource script-path = https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 插入广告
 # > 歌单顶部广告@ddgksf2013
-http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/scene\/show\/resource script-path = https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 歌单顶部广告
+# http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/scene\/show\/resource script-path = https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 歌单顶部广告
 # > 弹窗免费听歌@ddgksf2013
 http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/vip\/cashier\/tspopup\/get script-path = https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 弹窗免费听歌
 
