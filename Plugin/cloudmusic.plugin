@@ -45,6 +45,7 @@ DOMAIN-SUFFIX,163jiasu.com,REJECT-DROP
 # ======= 网易云框架区 ======= #
 # > 底部Tab@ddgksf2013
 #http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/home\/framework\/tab script-path = https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 底部Tab
+http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/link\/home\/framework\/tab script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/music163.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 底部选项卡
 # > 发现页@ddgksf2013
 # http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show script-path = https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 发现页
 http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/link\/page\/discovery\/resource\/show script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/music163.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 发现页
