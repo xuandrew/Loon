@@ -88,7 +88,7 @@ http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/page\/rc
 # http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/link\/position\/show\/resource script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 我的页面
 # http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/link\/position\/show\/resource script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/music163.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 我的页面
 # 显示未关注你的人
-http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/user\/follow\/users\/mixed\/get script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 显示未关注你的人
+# http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/user\/follow\/users\/mixed\/get script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 显示未关注你的人
 
 [MitM]
 hostname = interface*.music.163.com
