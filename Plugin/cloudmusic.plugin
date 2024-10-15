@@ -45,6 +45,7 @@ DOMAIN, ipv6.music.163.com, REJECT
 ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:delivery\/(batch-)?deliver|moment\/tab\/info\/|side-bar\/mini-program\/music-service\/account|yunbei\/account\/entrance\/) reject-dict
 # 播放页 歌名下方 乐迷团｜关注｜播放页提示｜音乐应用红点｜播放提示
 # ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:community\/friends\/fans-group\/artist\/group\/|mine\/applet\/redpoint|music\/songshare\/text\/recommend\/|resniche\/position\/play\/new\/|resource\/comments?\/musiciansaid\/|user\/sub\/artist) reject-dict
+# ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:community\/friends\/fans-group\/artist\/group\/|mine\/applet\/redpoint|music\/songshare\/text\/recommend\/|resniche\/position\/play\/new\/|resource\/comments?\/musiciansaid\/) reject-dict
 # ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:ios\/version|mlivestream\/entrance\/playpage\/|link\/position\/show\/strategy|link\/scene\/show\/resource|v1\/content\/exposure\/comment\/banner\/) reject-dict
 # 搜索页 搜索词 热搜卡片 猜你喜欢 我的应用下方提醒
 ^https?:\/\/interface\d?\.music\.163\.com\/w?eapi\/(?:activity\/bonus\/playpage\/time\/query|resource-exposure\/|search\/(?:chart\/|default\/|rcmd\/keyword\/|specialkeyword\/)) reject-dict
@@ -72,8 +73,8 @@ http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/vipauth\/app\/auth
 # 热推,有话想说,分享一下,歌曲下的祝福等小提示,评论区,乐迷,星评等级,关注等图标
 http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:batch|v2\/resource\/comment\/floor\/get) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/music163.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 评论区
 # 推荐,home,主页
-http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:homepage\/block\/page|link\/page\/rcmd\/(?:block\/resource\/multi\/refresh|resource\/show)) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/music163.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 主页
-# http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/page\/rcmd\/resource\/show script-path = https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 首推荐页
+# http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:homepage\/block\/page|link\/page\/rcmd\/(?:block\/resource\/multi\/refresh|resource\/show)) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/music163.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 主页
+http-response ^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/page\/rcmd\/resource\/show script-path = https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 首推荐页
 # 底部选项卡
 http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/link\/home\/framework\/tab script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/music163.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 底部选项卡
 # 发现
