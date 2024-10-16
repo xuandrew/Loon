@@ -6,22 +6,8 @@
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Bilibili.png
 #!date = 2024-05-23 13:25:06
 
-
-# [Rule]
-# DOMAIN, upos-sz-staticcos.bilivideo.com, REJECT
-# DOMAIN, grpc.biliapi.net, REJECT
-# DOMAIN, mall.bilibili.com, REJECT
-# DOMAIN, passport.bilibili.com, REJECT
-# IP-CIDR, 47.100.123.169/32, REJECT, no-resolve
-# ip-cidr, 47.101.175.206/32, REJECT, no-resolve
-#ip-cidr, 61.147.236.43/29, reject
-#ip-cidr, 61.147.236.46/32, reject
-# IP-CIDR, 120.46.169.234/32, REJECT, no-resolve
-# IP-CIDR, 121.36.72.124/32, REJECT, no-resolve
-#ip-cidr, 183.131.147.30/32, REJECT, no-resolve
-# IP-CIDR, 203.107.1.33/32, REJECT, no-resolve
-# IP-CIDR, 203.107.1.66/32, REJECT, no-resolve
-# IP-CIDR6, 240E:978:1503::243/128, REJECT, no-resolve
+[General]
+force-http-engine-hosts = :8000
 
 
 [Rewrite]
