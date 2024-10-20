@@ -1,10 +1,14 @@
 #!name = 喜马拉雅去广告
-#!desc = 喜马拉雅会员&去广告
+#!desc = 过滤喜马拉雅广告，解锁部分会员功能
 #!openUrl = https://apps.apple.com/app/id876336838
-#!author = @可莉🅥 @ClydeTime
-#!homepage = https://github.com/sooyaaabo/Loon
-#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Himalaya.png
-#!date = 2024-07-02 19:00
+#!author = 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md], ClydeTime[https://github.com/ClydeTime]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.2(749)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Himalaya.png
+#!date = 2024-09-16 22:30
 
 
 [URL Rewrite]
