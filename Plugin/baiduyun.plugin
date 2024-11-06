@@ -56,7 +56,7 @@ DOMAIN-SUFFIX, union.baidu.com, REJECT
 
 # ddgksf2013
 # 设置信息流
-^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list reject-200
+# ^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list reject-200
 # 通用广告
 ^https?:\/\/pan\.baidu\.com\/rest\/.*\/pcs\/ad reject-200
 # 活动推广
