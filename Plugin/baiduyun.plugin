@@ -35,7 +35,7 @@ DOMAIN-SUFFIX, union.baidu.com, REJECT
 
 [Rewrite]
 # RuCu6
-^https?:\/\/pan\.baidu\.com\/(act\/(api\/activityentry|v2\/(bchannel|welfare)\/list)|rest\/2\.0\/pcs\/ad) reject
+# ^https?:\/\/pan\.baidu\.com\/(act\/(api\/activityentry|v2\/(bchannel|welfare)\/list)|rest\/2\.0\/pcs\/ad) reject
 
 # 可莉🅥
 # 应用配置
@@ -50,7 +50,7 @@ DOMAIN-SUFFIX, union.baidu.com, REJECT
 # 我的 - 游戏中心
 ^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user\?method=gamecenter reject-dict
 # 我的页面 - 其他推广
-^https:\/\/pan\.baidu\.com\/act\/v2\/welfare\/list reject-dict
+#^https:\/\/pan\.baidu\.com\/act\/v2\/welfare\/list reject-dict
 # 广告配置
 ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adv reject-dict
 
