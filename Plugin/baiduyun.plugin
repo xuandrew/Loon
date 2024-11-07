@@ -107,7 +107,7 @@ DOMAIN-SUFFIX, union.baidu.com, REJECT
 # 弹窗配置
 ^https:\/\/pan\.baidu\.com\/act\/api\/activityentry reject-dict
 # 信息流广告
-^https:\/\/pan\.baidu\.com\/act\/api\/activityentry reject-dict
+# ^https:\/\/pan\.baidu\.com\/act\/api\/activityentry reject-dict
 # 我的 - 游戏中心
 ^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user\?method=gamecenter reject-dict
 # 我的页面 - 其他推广
