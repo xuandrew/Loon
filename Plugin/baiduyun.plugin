@@ -129,7 +129,7 @@ http-response ^https?:\/\/afd\.baidu\.com\/afd\/entry script-path = https://gist
 # 设置页游戏
 # http-response ^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?method=gamecenter script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body = true, tag = 百度网盘广告
 # 首页信息流
-http-response ^https:\/\/pan\.baidu\.com\/feed\/cardinfos script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body = true, tag = 百度网盘广告
+# http-response ^https:\/\/pan\.baidu\.com\/feed\/cardinfos script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body = true, tag = 百度网盘广告
 
 
 [Mitm]
