@@ -12,7 +12,7 @@
 
 [Rewrite]
 # 移除右上角活动入口
-^https:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\? mock-response-body data-type=json status-code=200 data="{ "code": -404, "message": "啥都木有", "ttl": 1, "data": null }"
+^https:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\? mock-response-body data-type=json status-code=200 data="{"code":-404,"message":"-404","ttl":1,"data":null}"
 
 
 [Script]
