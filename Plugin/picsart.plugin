@@ -1,0 +1,1 @@
+https://api.(meiease|picsart).(cn|com)/gw-v2/shop/subscription/apple/purchases url script-response-body https://raw.githubusercontent.com/Marol62926/MarScrpt/main/picsart.js
