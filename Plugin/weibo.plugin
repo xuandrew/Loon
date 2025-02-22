@@ -73,20 +73,20 @@ DOMAIN, adpinpai.video.weibocdn.com, REJECT
 ^https:\/\/api\.weibo\.cn\/2\/!\/live\/media_homelist\? reject-dict
 
 # 详情页 - 超话、评论区、看图界面、个人主页、我的页面、信息流、商品橱窗、视频流、视频号、视频调查、话题卡片
-#^https:\/\/api\.weibo\.cn\/2\/comments\/bullet_screens\? reject-dict
-#^https:\/\/api\.weibo\.cn\/2\/photo\/info\? reject-dict
-#^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:container_positive|push_info) reject-dict
-#^https:\/\/api\.weibo\.cn\/2\/vote\/get_vote_detail\? reject-dict
-#^https:\/\/api\.weibo\.cn\/2\/!\/chaohua\/discovery\/home_bottom\/switch\? reject-dict
-#^https:\/\/api\.weibo\.cn\/2\/!\/huati\/(?:discovery_home_bottom_getdotinfo|mobile_discovery_searchchange) reject-dict
-#^https:\/\/api\.weibo\.cn\/2\/!\/wbox\/\w+\/(?:home_bottom_modal|interest_category) reject-dict
+^https:\/\/api\.weibo\.cn\/2\/comments\/bullet_screens\? reject-dict
+^https:\/\/api\.weibo\.cn\/2\/photo\/info\? reject-dict
+^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:container_positive|push_info) reject-dict
+^https:\/\/api\.weibo\.cn\/2\/vote\/get_vote_detail\? reject-dict
+^https:\/\/api\.weibo\.cn\/2\/!\/chaohua\/discovery\/home_bottom\/switch\? reject-dict
+^https:\/\/api\.weibo\.cn\/2\/!\/huati\/(?:discovery_home_bottom_getdotinfo|mobile_discovery_searchchange) reject-dict
+^https:\/\/api\.weibo\.cn\/2\/!\/wbox\/\w+\/(?:home_bottom_modal|interest_category) reject-dict
 
 # 发现页 - 热门微博信息流、搜索列表、热搜提醒、猜你想搜、视频流红包
 ^https:\/\/api\.weibo\.cn\/2\/search\/container_discover\? reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/hot\/hours_spotlight\? reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/video\/redpacket\? reject-dict
 ^https:\/\/api\.weibo\.cn\/!\/(?:sug\/list\/finderchange|was\/finder\/searchbarchange)\? reject-dict
-#^https:\/\/api\.weibo\.cn\/2\/video\/tiny_video_info_show\? reject-dict
+^https:\/\/api\.weibo\.cn\/2\/video\/tiny_video_info_show\? reject-dict
 
 # 开屏广告 //*.uve.weibo.com
 ^https:\/\/(?:bootrealtime|bootpreload)\.uve\.weibo\.com\/v\d\/ad\/(?:realtime|preload) reject-dict
@@ -138,9 +138,9 @@ http-response ^https:\/\/api\.weibo\.cn\/2\/comments\/build_comments\? script-pa
 http-response ^https:\/\/api\.weibo\.cn\/2\/(?:container\/asyn|flowlist|flowpage) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除个人微博详情页广告@RuCu6
 http-response ^https:\/\/api\.weibo\.cn\/2\/friendships\/(?:create|destroy) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除关注、取消关注弹窗@RuCu6
 http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/(?:container_timeline|dealatt|me|statuses\/tab|userinfo) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除个人主页广告@RuCu6
-http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:container_timeline(?:_hot|_topic|_topicpage|_unread)?|repost_timeline|unread_hot_timeline) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除信息流广告@RuCu6
+;http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:container_timeline(?:_hot|_topic|_topicpage|_unread)?|repost_timeline|unread_hot_timeline) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除信息流广告@RuCu6
 http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:extend|show) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除微博详情页广告@RuCu6
-# http-response ^https:\/\/api\.weibo\.cn\/2\/video\/(?:full_screen_stream|tiny_stream_video_list)\? script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除视频流广告@RuCu6
+http-response ^https:\/\/api\.weibo\.cn\/2\/video\/(?:full_screen_stream|tiny_stream_video_list)\? script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除视频流广告@RuCu6
 http-response ^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels\? script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除超话顶部标签@RuCu6
 
 # 消息页
