@@ -77,7 +77,7 @@ DOMAIN, adpinpai.video.weibocdn.com, REJECT
 #^https:\/\/api\.weibo\.cn\/2\/photo\/info\? reject-dict
 #^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:container_positive|push_info) reject-dict
 #^https:\/\/api\.weibo\.cn\/2\/vote\/get_vote_detail\? reject-dict
-^https:\/\/api\.weibo\.cn\/2\/!\/chaohua\/discovery\/home_bottom\/switch\? reject-dict
+#^https:\/\/api\.weibo\.cn\/2\/!\/chaohua\/discovery\/home_bottom\/switch\? reject-dict
 #^https:\/\/api\.weibo\.cn\/2\/!\/huati\/(?:discovery_home_bottom_getdotinfo|mobile_discovery_searchchange) reject-dict
 #^https:\/\/api\.weibo\.cn\/2\/!\/wbox\/\w+\/(?:home_bottom_modal|interest_category) reject-dict
 
@@ -86,7 +86,7 @@ DOMAIN, adpinpai.video.weibocdn.com, REJECT
 ^https:\/\/api\.weibo\.cn\/2\/hot\/hours_spotlight\? reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/video\/redpacket\? reject-dict
 ^https:\/\/api\.weibo\.cn\/!\/(?:sug\/list\/finderchange|was\/finder\/searchbarchange)\? reject-dict
-^https:\/\/api\.weibo\.cn\/2\/video\/tiny_video_info_show\? reject-dict
+#^https:\/\/api\.weibo\.cn\/2\/video\/tiny_video_info_show\? reject-dict
 
 # 开屏广告 //*.uve.weibo.com
 ^https:\/\/(?:bootrealtime|bootpreload)\.uve\.weibo\.com\/v\d\/ad\/(?:realtime|preload) reject-dict
