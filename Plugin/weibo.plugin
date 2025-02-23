@@ -53,14 +53,14 @@ http-response ^https:\/\/api\.weibo\.cn\/2\/(?:container\/asyn|flowlist|flowpage
 http-response ^https:\/\/api\.weibo\.cn\/2\/friendships\/(?:create|destroy) script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js,requires-body=true,tag=移除关注、取消关注弹窗
 http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/(?:container_timeline|dealatt|me|statuses\/tab|userinfo) script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js,requires-body=true,tag=移除个人主页广告
 http-response ^https:\/\/api\.weibo\.cn\/2\/shproxy\/chaohua\/discovery\/searchactive\? script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js,requires-body=true,tag=移除超话搜索页广告
-# http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:container_timeline(?:_hot|_topic|_topicpage)?|repost_timeline|unread_hot_timeline) script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js,requires-body=true,tag=移除信息流广告
+http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:container_timeline(?:_hot|_topic|_topicpage)?|repost_timeline|unread_hot_timeline) script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js,requires-body=true,tag=移除信息流广告
 http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:extend|show) script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js,requires-body=true,tag=移除微博详情页广告
 http-response ^https:\/\/api\.weibo\.cn\/2\/video\/?:full_screen_stream\? script-path=https://raw.githubusercontent.com/xuandrew/Quantumult-X/refs/heads/master/Script/weibo.js,requires-body=true,tag=移除视频流广告
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/video/(community_tab|remind_info|tiny_stream_video_list) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=移除视频流广告
 http-response ^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels\? script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js,requires-body=true,tag=移除超话顶部标签
 http-response ^https:\/\/api\.weibo\.cn\/2\/direct_messages\/user_list\? script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js,requires-body=true,tag=移除消息页列表广告
 http-response ^https:\/\/api\.weibo\.cn\/2\/messageflow\/notice\? script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js,requires-body=true,tag=移除消息页提醒
-http-response ^https:\/\/api\.weibo\.cn\/2\/search\/(?:container_timeline|container_discover)? script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js,requires-body=true,tag=移除热门微博信息流广告
+http-response ^https:\/\/api\.weibo\.cn\/2\/search\/container_timeline\? script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js,requires-body=true,tag=移除热门微博信息流广告
 http-response ^https:\/\/api\.weibo\.cn\/2\/search\/finder\? script-path=https://raw.githubusercontent.com/xuandrew/Quantumult-X/refs/heads/master/Script/weibo.js,requires-body=true,tag=移除热门微博信息流广告
 http-response ^https:\/\/api\.weibo\.cn\/2\/searchall\? script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js,requires-body=true,tag=移除发现页搜索结果广告
 http-response ^https:\/\/bootpreload\.uve\.weibo\.com\/v[12]\/ad\/preload script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js,requires-body=true,tag=移除开屏广告 preload
