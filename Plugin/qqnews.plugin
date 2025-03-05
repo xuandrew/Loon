@@ -1,0 +1,17 @@
+#!name=腾讯新闻App去广告
+#!desc=腾讯新闻开屏广告(须全新应用),新闻列表(要闻/财经等),专题广告,xx旅游列表等广告去除。开屏页广告有缓存,需要全新应用
+#!openUrl=https://github.com/app2smile/rules
+#!author=app2smile
+#!tag=去广告
+#!system=
+#!system_version=
+#!loon_version=3.2.4(787)
+#!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weibo.png
+#!date=2024-12-17 21:27:52
+
+[Mitm]
+hostname = news.ssp.qq.com, r.inews.qq.com
+
+[Script]
+http-response ^https:\/\/(news\.ssp\.qq\.com\/app|r\.inews\.qq\.com\/(get(QQNewsUnreadList|TagFeedList|NewsRelateModule|QQNewsLimitList|RecommendSubList|SimpleVideo)|gw\/page\/(channel_feed|v2\/event_detail)|news_feed\/hot_module_list)) script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/qq-news.js, requires-body=true, timeout=10, tag=腾讯新闻json
