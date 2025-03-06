@@ -1,5 +1,14 @@
 #!name=Fimo解锁
 #!desc=fimo
+#!openUrl=
+#!author=chxm2013
+#!tag=App解锁
+#!system=
+#!system_version=
+#!loon_version=3.2.4(787)
+#!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
+#!icon=
+#!date=2024-12-17 21:27:52
 
 [Script]
 http-response ^https?:\/\/fimo\.appfimo\.com\/fimo-.*\/(user|apple\/certificate|config|startPopConfig|filmAll) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/fimo.js, requires-body=true, timeout=60, tag=fimo
