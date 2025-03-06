@@ -1,0 +1,8 @@
+#!name=Fimo解锁
+#!desc=fimo
+
+[Script]
+http-response ^https?:\/\/fimo\.appfimo\.com\/fimo-.*\/(user|apple\/certificate|config|startPopConfig|filmAll) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/fimo.js, requires-body=true, timeout=60, tag=fimo
+
+[MITM]
+hostname = fimo.appfimo.com
