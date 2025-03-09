@@ -63,3 +63,6 @@
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item) url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 
+
+[MitM]
+hostname = *.weibo.cn, *.weibo.com, weibo.com
