@@ -13,9 +13,6 @@
 
 
 [Rewrite]
-
-
-[Script]
 # > 微博_启动感兴趣弹窗@ddgksf2013
 ^https?:\/\/api\.weibo\.cn\/.*account\/recommend_interesttags url reject-dict
 # > 微博_首页顶部直播推荐Tab@ddgksf2013
@@ -24,30 +21,34 @@
 ^https?:\/\/api\.weibo\.cn\/.*finder\/searchbarchange url reject-200
 # > 微博_AD_Preload@ddgksf2013
 ^https?:\/\/api\.weibo\.cn\/\d\/ad\/preload url reject-dict
-# > 微博_首页顶部homeExtend@ddgksf2013
-^https?:\/\/api\.weibo\.cn\/\d\/groups\/allgroups\/v\d url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 # > 微博_用户推荐弹窗@ddgksf2013
 ^https?:\/\/api\.weibo\.cn\/\d\/profile\/recommend_popuser url reject-dict
-# > 微博_开屏广告预加载处理@ddgksf2013
-^https?:\/\/boot.*weibo\.com\/v\d\/ad\/preload url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
-# > 微博_未登陆状态下首页信息流处理@ddgksf2013
-^https?:\/\/api\.weibo\.cn\/\d\/\w{5}\/(statuses_unread_hot_timeline|timeline) url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 # > 微博_每日一次的开屏广告请求@ddgksf2013
 ^https?:\/\/boot.*weibo\.com\/v\d\/ad\/realtime url reject-200
-# > 微博_视频信息处理@ddgksf2013
-^https?:\/\/api\.weibo\.cn\/\d\/video\/tiny_stream_mid_detail url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 # > 微博_去除底部超话栏表层浮icon及tips@ddgksf2013
 ^https?:\/\/api\.weibo\.cn\/.*discovery_home_bottom_getdotinfo url reject-dict
 # > 微博_屏蔽首页左上角每日的弹窗tips@ddgksf2013
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily url reject-dict
-# > 微博_屏蔽发现页面搜索框热词@ddgksf2013
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/\w{5}\/cardlist url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
-# > 微博_应用内弹窗广告@ddgksf2013
-^https?:\/\/(preload-click|preload-impression)\.uve\.weibo\.com\/(interface\/wbpullad\/wbpullad_click\.php|wbapplua\/get_wbpullad_log\.lua) url reject
 # > 微博_屏蔽sdkconfig请求@ddgksf2013
 ^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php url reject
 # > 微博_Spotlight@ddgksf2013
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/hot\/hours_spotlight url reject-dict
+
+
+[Script]
+
+# > 微博_首页顶部homeExtend@ddgksf2013
+^https?:\/\/api\.weibo\.cn\/\d\/groups\/allgroups\/v\d url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+# > 微博_开屏广告预加载处理@ddgksf2013
+^https?:\/\/boot.*weibo\.com\/v\d\/ad\/preload url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+# > 微博_未登陆状态下首页信息流处理@ddgksf2013
+^https?:\/\/api\.weibo\.cn\/\d\/\w{5}\/(statuses_unread_hot_timeline|timeline) url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+# > 微博_视频信息处理@ddgksf2013
+^https?:\/\/api\.weibo\.cn\/\d\/video\/tiny_stream_mid_detail url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+# > 微博_屏蔽发现页面搜索框热词@ddgksf2013
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/\w{5}\/cardlist url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+# > 微博_应用内弹窗广告@ddgksf2013
+^https?:\/\/(preload-click|preload-impression)\.uve\.weibo\.com\/(interface\/wbpullad\/wbpullad_click\.php|wbapplua\/get_wbpullad_log\.lua) url reject
 # > 微博_自定义tab皮肤@zmqcherish
 ^https://api.weibo.cn/2/!/client/light_skin url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
 # > 微博_非会员设置tab皮肤@zmqcherish
