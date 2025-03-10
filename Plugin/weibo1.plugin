@@ -39,29 +39,29 @@ http-response ^https?:\/\/(preload-click|preload-impression)\.uve\.weibo\.com\/(
 
 [Script]
 # > 微博_首页顶部homeExtend@ddgksf2013
-http-response ^https?:\/\/api\.weibo\.cn\/\d\/groups\/allgroups\/v\d script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=
+http-response ^https?:\/\/api\.weibo\.cn\/\d\/groups\/allgroups\/v\d script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=移除首页顶部标签
 # > 微博_开屏广告预加载处理@ddgksf2013
-http-response ^https?:\/\/boot.*weibo\.com\/v\d\/ad\/preload script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=
+http-response ^https?:\/\/boot.*weibo\.com\/v\d\/ad\/preload script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=移除开屏广告预加载处理
 # > 微博_未登陆状态下首页信息流处理@ddgksf2013
-http-response ^https?:\/\/api\.weibo\.cn\/\d\/\w{5}\/(statuses_unread_hot_timeline|timeline) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=
+http-response ^https?:\/\/api\.weibo\.cn\/\d\/\w{5}\/(statuses_unread_hot_timeline|timeline) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=未登陆状态下首页信息流处理
 # > 微博_视频信息处理@ddgksf2013
-http-response ^https?:\/\/api\.weibo\.cn\/\d\/video\/tiny_stream_mid_detail script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=
+http-response ^https?:\/\/api\.weibo\.cn\/\d\/video\/tiny_stream_mid_detail script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=视频信息流处理
 # > 微博_屏蔽发现页面搜索框热词@ddgksf2013
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/\w{5}\/cardlist script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/\w{5}\/cardlist script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=屏蔽发现页面搜索框热词
 # > 微博_自定义tab皮肤@zmqcherish
-http-response ^https://api.weibo.cn/2/!/client/light_skin script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=
+http-response ^https://api.weibo.cn/2/!/client/light_skin script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=自定义tab皮肤
 # > 微博_非会员设置tab皮肤@zmqcherish
-http-response ^https://new.vip.weibo.cn/littleskin/preview script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=
+http-response ^https://new.vip.weibo.cn/littleskin/preview script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=非会员设置tab皮肤
 # > 微博_去广告以及去除各部分推广模块@zmqcherish,@ddgksf2013
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(searchall|page\?|messageflow) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses/(unread_)?friends(/|_)timeline script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/groups/timeline script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(searchall|page\?|messageflow) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=去广告以及去除各部分推广模块
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses/(unread_)?friends(/|_)timeline script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=去广告以及去除各部分推广模块
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/groups/timeline script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=去广告以及去除各部分推广模块
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses/(container_timeline|unread_hot_timeline|extend|video_mixtimeline|unread_topic_timeline) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/profile/(me|container_timeline) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/video/(community_tab|remind_info|tiny_stream_video_list) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/search/(finder|container_timeline|container_discover) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/profile/(me|container_timeline) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=去广告以及去除各部分推广模块
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/video/(community_tab|remind_info|tiny_stream_video_list) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=去广告以及去除各部分推广模块
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/search/(finder|container_timeline|container_discover) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=去广告以及去除各部分推广模块
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=去广告以及去除各部分推广模块
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=去广告以及去除各部分推广模块
 
 
 [MitM]
