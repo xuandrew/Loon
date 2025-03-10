@@ -67,4 +67,4 @@ http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist script-path=https:
 
 
 [MitM]
-hostname = *.weibo.cn, *.weibo.com, weibo.com, new.vip.weibo.cn, new.vip.weibo.com
+hostname = *.weibo.cn, *.weibo.com, weibo.com
