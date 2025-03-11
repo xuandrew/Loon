@@ -46,6 +46,8 @@ http-response ^https?:\/\/boot.*weibo\.com\/v\d\/ad\/preload script-path=https:/
 http-response ^https?:\/\/api\.weibo\.cn\/\d\/\w{5}\/(statuses_unread_hot_timeline|timeline) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=未登陆状态下首页信息流处理
 # > 微博_视频信息处理@ddgksf2013
 http-response ^https?:\/\/api\.weibo\.cn\/\d\/video\/tiny_stream_mid_detail script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=视频信息流处理
+# > 
+http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/repost_timeline script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js,requires-body=true,tag=移除评论区转发广告
 # > 微博_屏蔽发现页面搜索框热词@ddgksf2013
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/\w{5}\/cardlist script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=屏蔽发现页面搜索框热词
 # > 微博_自定义tab皮肤@zmqcherish
