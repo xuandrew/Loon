@@ -26,6 +26,10 @@ DOMAIN, adbehavior.wsa.ximalaya.com, REJECT
 ^https:\/\/(?:m|mwsa)\.ximalaya\.com\/x-web-activity\/signIn\/getHomePageSignInInfo\/ reject-dict
 # 播放器 - 推广
 ^https:\/\/(?:mobile|mobilehera|mobwsa)\.ximalaya\.com\/mobile-playpage\/playpage\/recommend\/resource\/allocation\/ reject-dict
+# 我的页面 - 右上角免费听图标
+^https:\/\/(?:mobile|mobilehera|mobwsa)\.ximalaya\.com\/mobile-user\/v\d\/homePage\/ response-body-json-del data.freeListenV2
+# 我的页面 - 直播提醒气泡
+^https:\/\/(?:live|livewsa)\.ximalaya\.com\/lamia\/v1\/subscribe\/status$ reject-dict
 
 https?:\/\/xdcs-collector(hera)?\.ximalaya\.com\/(api|nyx)\/v1 reject
 https?:\/\/.*\.ximalaya\.com\/mobile-playpage\/view\/ reject
