@@ -72,9 +72,9 @@ http-response ^https?:\/\/search(wsa)?\.ximalaya\.com\/(hub\/)?(guideWordV\d|hot
 http-request ^https:\/\/mobile\.ximalaya\.com\/mobile-playpage\/(?:track\/v4\/baseInfo|playpage\/recommendContentV2|playpage\/tabs\/v2) script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/refs/heads/main/XMLYVIP.js, requires-body = false, tag = 解锁会员@怎么肥事
 
 # 首页顶部去除直播
-http-response ^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories script-path = https://kelee.one/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除首页直播推广@可莉🅥
+# http-response ^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories script-path = https://kelee.one/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除首页直播推广@可莉🅥
 # 屏蔽首页动态广告
-http-response ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix script-path = https://kelee.one/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除首页动态广告@可莉🅥
+# http-response ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix script-path = https://kelee.one/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除首页动态广告@可莉🅥
 
 
 [Mitm]
