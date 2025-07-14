@@ -31,27 +31,6 @@ DOMAIN, adbehavior.wsa.ximalaya.com, REJECT
 # 我的页面 - 直播提醒气泡
 ^https:\/\/(?:live|livewsa)\.ximalaya\.com\/lamia\/v1\/subscribe\/status$ reject-dict
 
-https?:\/\/xdcs-collector(hera)?\.ximalaya\.com\/(api|nyx)\/v1 reject
-https?:\/\/.*\.ximalaya\.com\/mobile-playpage\/view\/ reject
-https?:\/\/.*\.ximalaya\.com\/chaos-notice-web\/v1\/message\/preview\/list reject
-https?:\/\/.*\.ximalaya\.com\/social-web\/bottomtabs\/dynamicentrance\/status reject
-https?:\/\/.*\.ximalaya\.com\/(dog-portal\/checkold|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) reject
-https?:\/\/.*\.ximalaya\.com\/discovery-feed\/isshowusergiftpendant reject
-https?:\/\/.*\.ximalaya\.com\/mobile-user\/unread reject
-https?:\/\/.*\.ximalaya\.com\/mobile-user\/minorprotection\/pop reject
-https?:\/\/.*\.ximalaya\.com\/collector\/xl\/v\d reject
-https?:\/\/.*\.ximalaya\.com\/butler-portal\/versioncheck reject
-https?:\/\/(adse\.wsa|adse|adbehavior)\.ximalaya\.com\/.* reject
-https?:\/\/.*\.ximalaya\.com\/mobile\/discovery\/v\d\/location reject
-https?:\/\/.*\.ximalaya\.com\/api\/v\d\/adrealtime reject
-https?:\/\/.*\.ximalaya\.com\/ting\/(loading|feed|home)? reject
-https?:\/\/.*\.ximalaya\.com\/discovery-feed\/focus\/queryf reject
-https?:\/\.*linkeye-cloud\/checkip reject
-https?:\/\/www\.taobao\.com\/help\/getip\.php reject
-https?:\/\.*audid-api\.taobao\.com reject
-https?:\/\/passport(ws)?\.ximalaya\.com\/user-http-app\/v1\/token\/refresh reject
-^https?:\/\/adse\.ximalaya\.com\/incentive\/ting\/durationConfig reject
-
 
 [Script]
 # ClydeTime
