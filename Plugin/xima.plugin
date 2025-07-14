@@ -26,6 +26,8 @@ DOMAIN, adbehavior.wsa.ximalaya.com, REJECT
 ^https:\/\/(?:m|mwsa)\.ximalaya\.com\/x-web-activity\/signIn\/getHomePageSignInInfo\/ reject-dict
 # 首页 - 精简频道分类
 ^https:\/\/(?:mobile|mobilehera|mobwsa)\.ximalaya\.com\/discovery-category\/customCategories\/ response-body-json-jq '.categoryList |= map(.itemList |= map(select(.title | test("直播|123狂欢节|SVIP"; "i") | not))) | .customCategoryList |= map(select(.title | test("直播|123狂欢节|SVIP"; "i") | not))'
+# 播放页Live
+^https?:\/\/.*\.ximalaya\.com\/mobile-playpage\/view\/ reject-dict
 # 播放器 - 推广
 ^https:\/\/(?:mobile|mobilehera|mobwsa)\.ximalaya\.com\/mobile-playpage\/playpage\/recommend\/resource\/allocation\/ reject-dict
 # 我的页面 - 直播提醒气泡
