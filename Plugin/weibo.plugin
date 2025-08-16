@@ -65,11 +65,11 @@ http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/profile/container_timeline 
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/video/(community_tab|remind_info|tiny_stream_video_list) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=去广告以及去除各部分推广模块
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/search/(finder|container_timeline|container_discover) script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/weibo_json.js,requires-body=true,tag=去广告以及去除各部分推广模块
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(checkin/show|\!/live/media_homelist|container/get_item) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=去广告以及去除各部分推广模块
-http-response ^https:\/\/api\.weibo\.cn\/2\/comments\/build_comments\? script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = [微博]移除评论区广告
+http-response ^https:\/\/api\.weibo\.cn\/2\/comments\/build_comments\? script-path = https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js, requires-body = true, tag = [微博]移除评论区广告
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/cardlist script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=去广告以及去除各部分推广模块
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/push\/active script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js,requires-body=true,tag=移除首页红包推广
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/push\/active script-path=https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js,requires-body=true,tag=移除首页红包推广
 # http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/search\/finder\? script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js,requires-body=true,tag=移除发现页标签广告
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/profile\/me script-path=https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js,requires-body=true,tag=移除个人主页广告
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/profile\/me script-path=https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js,requires-body=true,tag=移除个人主页广告
 
 [MitM]
 hostname = *.weibo.cn, *.weibo.com, weibo.com
