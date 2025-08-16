@@ -21,7 +21,7 @@ DOMAIN, adstrategy.biz.weibo.com, REJECT
 # > 微博_首页顶部弹窗@ddgksf2013
 ^https?:\/\/api\.weibo\.cn\/\d\/push\/info reject-dict
 # > 微博_删除侧栏视频流@ddgksf2013
-^https?:\/\/api\.weibo\.cn\/\d\/ug\/checkin\/stream jsonjq-response-body '.items |= map(select(.category != "card"))'
+^https?:\/\/api\.weibo\.cn\/\d\/ug\/checkin\/stream response-body-json-jq '.items |= map(select(.category != "card"))'
 # > 微博_启动感兴趣弹窗@ddgksf2013
 ^https?:\/\/api\.weibo\.cn\/.*account\/recommend_interesttags reject-dict
 # > 微博_首页顶部直播推荐Tab@ddgksf2013
