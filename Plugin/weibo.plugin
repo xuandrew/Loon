@@ -13,7 +13,7 @@
 
 
 [Rule]
-Domain, adstrategy.biz.weibo.com, Reject
+DOMAIN, adstrategy.biz.weibo.com, REJECT
 
 [Rewrite]
 # > 微博_启动感兴趣弹窗@ddgksf2013
