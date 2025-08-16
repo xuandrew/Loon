@@ -17,9 +17,9 @@ DOMAIN, adstrategy.biz.weibo.com, REJECT
 
 [Rewrite]
 # > 微博_首页信息流可能感兴趣推广@ddgksf2013
-^https?:\/\/api\.weibo\.cn\/\d\/statuses\/container_positive reject-200
+^https?:\/\/api\.weibo\.cn\/\d\/statuses\/container_positive reject-dict
 # > 微博_首页顶部弹窗@ddgksf2013
-^https?:\/\/api\.weibo\.cn\/\d\/push\/info reject-200
+^https?:\/\/api\.weibo\.cn\/\d\/push\/info reject-dict
 # > 微博_删除侧栏视频流@ddgksf2013
 ^https?:\/\/api\.weibo\.cn\/\d\/ug\/checkin\/stream jsonjq-response-body '.items |= map(select(.category != "card"))'
 # > 微博_启动感兴趣弹窗@ddgksf2013
@@ -66,7 +66,7 @@ http-response ^https://new.vip.weibo.cn/littleskin/preview script-path=https://g
 # > 微博_解锁微博会员APP图标
 http-response ^https?:\/\/new\.vip\.weibo\.c(n|om)\/aj\/appicon\/list script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/weibo/weibo_vip.js,requires-body=true,tag=解锁微博会员APP图标
 # > 微博_去广告以及去除各部分推广模块@zmqcherish,@ddgksf2013
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(searchall|page\?|messageflow) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=去广告以及去除各部分推广模块
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(searchall|page\?|flowpage) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=去广告以及去除各部分推广模块
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses/(unread_)?friends(/|_)timeline script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=去广告以及去除各部分推广模块
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/groups/timeline script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=去广告以及去除各部分推广模块
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/statuses/(container_timeline|unread_hot_timeline|extend|video_mixtimeline|unread_topic_timeline) script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js,requires-body=true,tag=去广告以及去除各部分推广模块
