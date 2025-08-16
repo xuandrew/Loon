@@ -12,6 +12,9 @@
 
 
 
+[Rule]
+Domain, adstrategy.biz.weibo.com, Reject
+
 [Rewrite]
 # > 微博_启动感兴趣弹窗@ddgksf2013
 ^https?:\/\/api\.weibo\.cn\/.*account\/recommend_interesttags reject-dict
