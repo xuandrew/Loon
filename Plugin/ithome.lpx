@@ -1,0 +1,25 @@
+#!name = IT之家去广告
+#!desc = 可自定义
+#!openUrl = https://apps.apple.com/app/id570610859
+#!author = @Keywos
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.4(898)
+#!homepage = https://github.com/Keyword
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/IThome.png
+#!date = 2025-10-11 00:57
+#!select = 去除轮播图广告,开启,关闭
+#!select = 去除整个轮播图,开启,关闭
+#!select = 去除置顶,开启,关闭
+
+[Rewrite]
+^https?:\/\/api\.zuihuimai\.com\/static\/.*\/hongbao reject
+^https?:\/\/dat\.ruanmei\.com\/ithome\/money\/acd\.json$ reject
+^https:\/\/img\.ithome\.com\/zuihuimai\/static\/.*\/hongbaojd reject
+
+[Script]
+http-response ^https:\/\/napi\.ithome\.com\/api\/(?:news\/index|topmenu\/getfeeds\?|api\/douyin\/GetLiveInfo) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/ithome/js/index.js, requires-body = true, tag = IT之家去广告
+  
+[MITM]
+hostname = napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com, img.ithome.com
