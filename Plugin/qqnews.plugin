@@ -14,4 +14,4 @@
 hostname = news.ssp.qq.com, r.inews.qq.com
 
 [Script]
-http-response ^https:\/\/(news\.ssp\.qq\.com\/app|r\.inews\.qq\.com\/(get(QQNewsUnreadList|TagFeedList|NewsRelateModule|QQNewsLimitList|RecommendSubList|SimpleVideo|QNChannels)|gw\/page\/(channel_feed|v(2|4)\/event_detail)|news_feed\/hot_module_list|v1\/usercenter\/module\/get2)) script-path=https://raw.githubusercontent.com/xuandrew/Quantumult-X/refs/heads/master/Script/q_news.js, requires-body=true, timeout=10, tag=腾讯新闻json
+http-response ^https:\/\/(news\.ssp\.qq\.com\/app|r\.inews\.qq\.com\/(get(QQNewsUnreadList|TagFeedList|NewsRelateModule|QQNewsLimitList|RecommendSubList|SimpleVideo|QNChannels|ONSDict)|gw\/page\/(channel_feed|v(2|4)\/event_detail)|news_feed\/hot_module_list|v1\/usercenter\/module\/get2)) script-path=https://raw.githubusercontent.com/xuandrew/Quantumult-X/refs/heads/master/Script/q_news.js, requires-body=true, timeout=10, tag=腾讯新闻json
