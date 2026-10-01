@@ -1,3 +1,16 @@
+#!name=闲鱼去广告
+#!desc=移除开屏广告、商品信息流广告、关注推荐、搜索栏填充词、首页签到入口及悬浮广告，精简我的页面。
+#!openUrl=https://apps.apple.com/app/id510909506
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag=去广告
+#!system=
+#!system_version=
+#!loon_version=3.4.0(962)
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/FleaMarket.png
+#!date=2026-09-28 17:03:58
+
+
 
 [Script]
 
@@ -26,3 +39,6 @@ response if ${url} ~= /^https:\/\/(acs\.m\.goofish\.com|g-acs\.m\.goofish\.com)\
 response if ${url} ~= /^https:\/\/(acs\.m\.goofish\.com|g-acs\.m\.goofish\.com)\/gw\/mtop\.taobao\.idle\.trade\.full\.info/i then script("goofish.js") with tag="闲鱼净化", timeout=10, requires_body=true
 response if ${url} ~= /^https:\/\/(acs\.m\.goofish\.com|g-acs\.m\.goofish\.com)\/gw\/mtop\.taobao\.idle\.item\.buy\.feeds/i then script("goofish.js") with tag="闲鱼净化", timeout=10, requires_body=true
 response if ${url} ~= /^https:\/\/(acs\.m\.goofish\.com|g-acs\.m\.goofish\.com)\/gw\/mtop\.taobao\.idle\.playboy\.recommend/i then script("goofish.js") with tag="闲鱼净化", timeout=10, requires_body=true
+
+[MitM]
+hostname=acs.m.goofish.com, g-acs.m.goofish.com
